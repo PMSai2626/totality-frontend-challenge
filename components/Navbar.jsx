@@ -32,13 +32,13 @@ const Navbar = () => {
 
             </div>
             <div className={`lg:flex lg:space-x-4  ${isOpen ? 'block' : 'hidden' }`}>
-                <Link href='/'  className='text-white hover:text-gray-400' >
+                <Link href='/'  className='text-white mr-5 hover:text-gray-400' >
                 Home
                 </Link>
-                <Link href='/properties' className='text-white hover:text-gray-400 ml-2'>
+                <Link href='/properties' className='text-white mr-5 hover:text-gray-400 ml-2'>
                 Properties
                 </Link>
-                <Link href='/cart' className='text-white hover:text-gray-400 ml-2'>
+                <Link href='/cart' className='text-white mr-5 hover:text-gray-400 ml-2'>
                  cart <span className=' text-white '> {cart.length} </span> 
                 </Link>
 
