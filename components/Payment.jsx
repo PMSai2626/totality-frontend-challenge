@@ -48,7 +48,7 @@ const handlePayment = () => {
 
     const handleRedirect = () => {
         clearCart();
-        setShowpopup(false)
+        setShowpopup(true)
         
     }
 
