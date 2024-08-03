@@ -211,8 +211,8 @@ const handlePayment = () => {
             <div className="fixed inset-0 bg-gray-500 bg-opacity-75 items-center justify-center">
                 <div className="bg-white p-6 rounded shadow-md text-center">
                     <h2 className="text-2xl font-semibold mb-4">Payment Successful</h2>
-{/*                     <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={() => setShowpopup(false)}>Close</button> */}
-                    <Link href='/properties'><button className="bg-orange-500 text-white px-2 py-2 rounded font-semibold">Go To Preperties</button></Link>
+                   <Link href='/properties'> <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={() => setShowpopup(false)}>Go To Properties</button></Link>
+{/*                     <button className="bg-orange-500 text-white px-2 py-2 rounded font-semibold">Go To Preperties</button> */}
 
                 </div>
 
