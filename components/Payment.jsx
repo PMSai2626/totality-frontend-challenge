@@ -6,7 +6,7 @@ import { useCart } from "@/app/context/CartContext";
 import Link from "next/link";
 
 const Payment = () => {
-    const {cart} = useCart()
+    const {cart, clearCart} = useCart()
     const [showPopup, setShowpopup] = useState(false);
     const [formData, setFormdata] = useState({
         name: '',
@@ -46,6 +46,12 @@ const handlePayment = () => {
     setShowpopup(true)
 }
 
+    const handleRedirect = () => {
+        clearCart();
+        setShowpopup(true)
+        
+    }
+
 
     const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0)
@@ -59,7 +65,11 @@ const handlePayment = () => {
             <h2 className="text-xl font-semibold mb-4">Review Your Items</h2>
             <div className="mb-4 p-4 rounded-md overflow-x-auto">
                 {cart.map((item) => (
+<<<<<<< HEAD
                     <div key={item.id} className="flex flex-col sm:flex-row  items-center mb-4">
+=======
+                    <div key={item.id} className="flex flex-col sm:flex-row items-center mb-4">
+>>>>>>> fe187d63db45a61c3048ed79d07aca555c1790f4
                         <Image src={item.image || '/default-image.jpg' } alt={item.title}
                             width={60}
                             height={60}
@@ -211,8 +221,8 @@ const handlePayment = () => {
             <div className="fixed inset-0 bg-gray-500 bg-opacity-75 items-center justify-center">
                 <div className="bg-white p-6 rounded shadow-md text-center">
                     <h2 className="text-2xl font-semibold mb-4">Payment Successful</h2>
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={() => setShowpopup(false)}>Close</button>
-                    <Link href='/properties'><button className="bg-orange-500 text-white rounded font-semibold">Go To Preperties</button></Link>
+                   <Link href='/properties'> <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={handleRedirect}>Go To Properties</button></Link>
+{/*                     <button className="bg-orange-500 text-white px-2 py-2 rounded font-semibold">Go To Preperties</button> */}
 
                 </div>
 
