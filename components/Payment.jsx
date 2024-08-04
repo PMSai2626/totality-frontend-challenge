@@ -59,7 +59,7 @@ const handlePayment = () => {
             <h2 className="text-xl font-semibold mb-4">Review Your Items</h2>
             <div className="mb-4 p-4 rounded-md overflow-x-auto">
                 {cart.map((item) => (
-                    <div key={item.id} className="flex flex-grow items-center mb-4">
+                    <div key={item.id} className="flex flex-col sm:flex-row  items-center mb-4">
                         <Image src={item.image || '/default-image.jpg' } alt={item.title}
                             width={60}
                             height={60}
@@ -82,7 +82,7 @@ const handlePayment = () => {
                 <p>Total price: ${totalPrice.toFixed(2)} </p>
                 </div>
             </div>
-            <div className="">
+            <div >
             <h2 className="text-xl font-semibold mb-4">Enter Your Details</h2>
             <form className="space-y-4">
                 <div className="flex gap-4">
