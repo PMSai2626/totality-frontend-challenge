@@ -65,11 +65,9 @@ const handlePayment = () => {
             <h2 className="text-xl font-semibold mb-4">Review Your Items</h2>
             <div className="mb-4 p-4 rounded-md overflow-x-auto">
                 {cart.map((item) => (
-<<<<<<< HEAD
                     <div key={item.id} className="flex flex-col sm:flex-row  items-center mb-4">
-=======
+
                     <div key={item.id} className="flex flex-col sm:flex-row items-center mb-4">
->>>>>>> fe187d63db45a61c3048ed79d07aca555c1790f4
                         <Image src={item.image || '/default-image.jpg' } alt={item.title}
                             width={60}
                             height={60}
